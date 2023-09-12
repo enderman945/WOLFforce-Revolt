@@ -1,0 +1,23 @@
+{
+  "name": "wolfforce-revolt",
+  "version": "1.0.0",
+  "description": "A reborn version of the WOLFforce Hera manager",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enderman945/WOLFforce-Revolt.git"
+  },
+  "author": "Gu://em_",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/enderman945/WOLFforce-Revolt/issues"
+  },
+  "homepage": "https://github.com/enderman945/WOLFforce-Revolt#readme",
+  "devDependencies": {
+    "electron": "^26.2.0"
+  }
+}
