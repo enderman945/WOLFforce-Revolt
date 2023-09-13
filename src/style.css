@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "Zekton";
+  src: url('assets/Fonts/zekton.otf');}
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-family: "Zekton";
+    font-size: 300%;
+    text-shadow: 0px 0px 28px rgba(27, 27, 27, 0.719);
+    user-select: none;
+    margin-top: 80px;
+  }
+
+body {
+  user-select: none;
+  background-image: url('assets/Images/House_background.jpg');
+  background-repeat: no-repeat;
+    background-size: cover;
+  background-attachment: fixed;
+
+  margin-top: 0px;
+  margin-bottom: 0;
+  padding:0;
+  margin-left: 0px; 
+  margin-right: 0px;
+}
+
+.TopBar {
+  /*d background-color: #333; */
+  overflow: hidden;
+  margin-top: 0px;
+  padding:0;
+  /* -webkit-app-region: drag; */
+}
+
+.TopBar a {
+  float:left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 16px 0px;
+  text-decoration: none;
+  font-size: 28px;
+  font-family: 'Zekton';
+  font-weight: bold;
+}
+
+.TopBar a:hover {
+  /* background-color: #3f45e6; */
+  color: #f2f2f2;
+}
+
+.TopBar a.active {
+  /* background-color: #04AA6D; */
+  background-color: #353be5;
+  color: white;
+}
+
+
+#footer{ 
+  position: fixed;     
+  text-align: center;    
+  bottom: 0px; 
+  width: 100%;
+  background-color: #353be5;
+  color: #ddd;
+  font-family: "zekton";
+padding: 2px;
+}  
+
+#footer-right{
+  position: fixed;     
+  text-align: right;    
+  bottom: 0px; 
+  width: 100%;
+  color: #ddd;
+  font-family: "zekton";
+  margin-right: 10px;
+  /* float: right; */
+}
+
+
+s1::before {  
+  transform: scaleY(0);
+  transform-origin: bottom right;
+}
+
+s1:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom left;
+}
+
+s1::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  background: #353be5;
+  z-index: -1;
+  transition: transform .3s ease;
+}
+
+s1 {
+  position: relative;;
+  padding: 16px 32px;
+}
+
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
