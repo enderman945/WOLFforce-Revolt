@@ -12,24 +12,41 @@
 
   <body>
 
+  <!-- <div class="window-drag"></div> -->
+  <div>
+    <div>
+      <a id="TopAccount" href="#accounts" draggable="false"> <img src="assets/Icons/user_white.png" width="28" height="28" alt="Account" draggable="false"> </a>
+      <a id="TopOptions" href="#settings" draggable="false"> <img src="assets/Icons/setting_white.png" width="28" height="28" alt="Settings" draggable="false"> </a>
+    </div>
+
     <div class="TopBar" draggable="false">
       <a class="active" href="#home"> <s1>Home</s1> </a>
       <a href="#modpacks" draggable="false"> <s1>Modpacks</s1> </a>
       <a href="#shaders" draggable="false"> <s1>Shaders</s1> </a>
       <a href="#settings" draggable="false"><s1>Settings</s1></a>
+      <a class="window-drag"></a>
+
     </div>
 
-
-    <h1>Bienvenue</h1>
-    
-
-    <div id="footer"> WOLFforce Revolt Alpha</div>
-
-    <div id="footer-right">
-      Node.js: <span id="node-version"></span>
-      Chromium: <span id="chrome-version"></span>,
-      Electron: <span id="electron-version"></span>
+    <div>
+      <!-- <a class="window-drag"></a> -->
     </div>
+  </div>
+
+
+  <h1>Bienvenue</h1>
+  
+
+  <div id="footer"> WOLFforce Revolt Alpha</div>
+
+  <div id="footer-right">
+    Node.js: <span id="node-version"></span>
+    Chromium: <span id="chrome-version"></span>,
+    Electron: <span id="electron-version"></span>
+  </div>
+
+
+  <a href="#settings" id="action_button" draggable="false"> <img src="assets/Icons/WOLFforce_icon_22_256px.png" id="action_icon" draggable="false"> </a>
 
   </body>
   <!-- <script src="./renderer.js"></script> -->

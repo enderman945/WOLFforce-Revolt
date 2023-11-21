@@ -131,4 +131,6 @@ dist
 
 
 .vscode/
-.notes/
+.notes
+.idea/
+src/assets/*/Tests

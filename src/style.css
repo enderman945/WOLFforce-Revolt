@@ -2,43 +2,58 @@
   font-family: "Zekton";
   src: url('assets/Fonts/zekton.otf');}
 
+@media (orientation: landscape) {
+  body {
+    grid-auto-flow: column;
+  }
+}
+
+/*-Texts----------------------------------------------------------*/
+
+
   h1 {
     color: white;
     text-align: center;
     font-family: "Zekton";
     font-size: 300%;
-    text-shadow: 0px 0px 28px rgba(27, 27, 27, 0.719);
+    text-shadow: 0 0 28px rgba(27, 27, 27, 0.719);
     user-select: none;
     margin-top: 80px;
   }
 
+
+/*-Page----------------------------------------------------------*/
+
+
 body {
   user-select: none;
-  background-image: url('assets/Images/House_background.jpg');
+  /*background-image: url('assets/Images/House_background.jpg');*/
+  background-image: url('assets/Images/prism.jpg');
   background-repeat: no-repeat;
     background-size: cover;
   background-attachment: fixed;
 
-  margin-top: 0px;
-  margin-bottom: 0;
   padding:0;
-  margin-left: 0px; 
-  margin-right: 0px;
+  margin: 0;
 }
+
+
+/*-Classes----------------------------------------------------------*/
+
 
 .TopBar {
   /*d background-color: #333; */
   overflow: hidden;
-  margin-top: 0px;
+  margin-top: 0;
   padding:0;
   /* -webkit-app-region: drag; */
 }
 
 .TopBar a {
-  float:left;
+  float: left;
   color: #f2f2f2;
   text-align: center;
-  padding: 16px 0px;
+  padding: 16px 0;
   text-decoration: none;
   font-size: 28px;
   font-family: 'Zekton';
@@ -55,6 +70,30 @@ body {
   background-color: #353be5;
   color: white;
 }
+
+.TopBar b {
+  float: left;
+  /* min-width: 10%; */
+  /* max-width: 40%; */
+  width: 35%;
+  width:min-content;
+}
+
+.window-drag{
+  /* position:fixed; */
+  /* top: 0; */
+  /* right: 250px; */
+  /* float: inline-end; */
+  height: 70px;
+  min-width: 10%;
+  max-width: 80%;
+  width: auto;
+  /*background-color: #35e55e;*/
+  -webkit-app-region: drag;  
+}
+
+
+/*-Ids----------------------------------------------------------*/
 
 
 #footer{ 
@@ -79,8 +118,88 @@ padding: 2px;
   /* float: right; */
 }
 
+#action_button{
+  position:fixed;
+  width:48px;
+  height:48px;
+  bottom:40px;
+  right:20px;
+  background-color: rgba(24, 24, 24, 0.5);
+  color:#FFF;
+  border-radius:10px;
+  text-align:center;
+  padding: 12px;
+  border-color: #646464;
+  border-width: 1px;
+  border-style: solid;
+  backdrop-filter:blur(15px);
+  transition: all 0.3s ease;
+}
 
-s1::before {  
+#action_button:hover{
+  box-shadow: 0 2px 25px rgba(13, 90, 255, 0.58);
+  transform: scale(105%);
+}
+
+#action_icon{
+  width:48px;
+  height:48px;
+  display: inline-block;
+  filter:brightness(0.95);
+}
+
+#TopOptions{
+  position:fixed;
+  width:24px;
+  height:24px;
+  top:20px;
+  /*padding: 12px;*/
+  right:165px;
+  /*background-color: rgba(24, 24, 24, 0.5);*/
+  /*color: #9b9b9b;*/
+  border-radius:100px;
+  text-align:center;
+  /*border-color: #646464;*/
+  /*border-width: 1px;*/
+  /*border-style: solid;*/
+  backdrop-filter:blur(15px);
+  transition: all 0.3s ease;
+}
+
+#TopOptions:hover{
+  box-shadow: 0 2px 25px rgba(13, 90, 255, 0.58);
+  transform: scale(105%);
+}
+
+#TopAccount{
+  position:fixed;
+  width:24px;
+  height:24px;
+  top:20px;
+  right:225px;
+  color: #9b9b9b;
+  border-radius:100px;
+  text-align:center;
+  backdrop-filter:blur(15px);
+  transition: all 0.3s ease;
+  /*filter:invert();*/
+}
+
+#TopAccount:hover{
+  box-shadow: 0 2px 25px rgba(13, 90, 255, 0.58);
+  transform: scale(105%);
+}
+
+
+/*-Styles----------------------------------------------------------*/
+
+
+s1 {
+  position: relative;;
+  padding: 16px 32px;
+}
+
+s1::before {
   transform: scaleY(0);
   transform-origin: bottom right;
 }
@@ -97,17 +216,14 @@ s1::before {
   top: 0; right: 0; bottom: 0; left: 0;
   inset: 0 0 0 0;
   background: #353be5;
+  /*background-image: url("assets/Images/Wuex Wiolet.png");*/
   z-index: -1;
   transition: transform .3s ease;
 }
 
-s1 {
-  position: relative;;
-  padding: 16px 32px;
-}
 
-@media (orientation: landscape) {
-  body {
-    grid-auto-flow: column;
-  }
-}
+/*-Filters----------------------------------------------------------*/
+
+
+.brightness { filter: brightness(0.95); }
+.blur { filter: blur(5px); }
